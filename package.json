@@ -1,0 +1,19 @@
+{
+  "name": "ui5-wcr-vite-template",
+  "version": "0.0.1",
+  "main": "src/main.jsx",
+  "dependencies": {
+    "@ui5/webcomponents-react": "~1.23.3",
+    "@ui5/webcomponents": "~1.20.1",
+    "@ui5/webcomponents-fiori": "~1.20.1",
+    "@vitejs/plugin-react": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^3.0.9"
+  },
+  "scripts": {
+    "start": "vite"
+  },
+  "keywords": [],
+  "description": ""
+}
