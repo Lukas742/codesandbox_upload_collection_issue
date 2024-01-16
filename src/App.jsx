@@ -1,14 +1,37 @@
 import {
+  Button,
   Dialog,
-  UploadCollection,
   ThemeProvider,
+  UploadCollection,
 } from "@ui5/webcomponents-react";
-import wcrPkg from "@ui5/webcomponents-react/package.json";
+import { useRef, useState } from "react";
 
 export default function App() {
+  const dialogRef = useRef(null);
+  const [open, setOpen] = useState(false);
   return (
     <ThemeProvider>
-      <Dialog open>
+      <Button
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
+        Open
+      </Button>
+      <Button
+        onClick={() => {
+          dialogRef.current.show();
+        }}
+      >
+        Open via ref
+      </Button>
+      <Dialog
+        ref={dialogRef}
+        open={open}
+        onAfterClose={() => {
+          setOpen(false);
+        }}
+      >
         <UploadCollection
           mode="SingleSelect"
           // onDrop={onFileDrop}
